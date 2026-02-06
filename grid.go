@@ -46,8 +46,12 @@ func PartitionImage() {
 			defer cell.Close()
 
 			// with image write = ~1.11ms, without = ~3.8µs
-			filename := fmt.Sprintf("cell_%d.jpg", count)
-			gocv.IMWrite(filename, cell)
+			//filename := fmt.Sprintf("cell_%d.jpg", count)
+			//gocv.IMWrite(filename, cell)
+
+			// what we need to do here is load the specific grid into a buffer
+			// then hand it over to pixel analysis
+
 			count++
 		}
 	}

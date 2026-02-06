@@ -12,5 +12,5 @@ func main() {
 	ProcessImageFrames()
 
 	elapsed := time.Since(start)
-	fmt.Println("execution time: %s\n", elapsed)
+	fmt.Println("execution time: \n", elapsed)
 }

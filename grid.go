@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"image"
-	"time"
 
 	"gocv.io/x/gocv"
 )
@@ -29,7 +28,6 @@ func PartitionImage() {
 
 	count := 0
 	// let's see how long this operation takes
-	start := time.Now()
 	for r := 0; r < rows; r++ {
 		for c := 0; c < columns; c++ {
 			y1 := r * cellHeight
@@ -53,6 +51,4 @@ func PartitionImage() {
 			count++
 		}
 	}
-	elapsed := time.Since(start)
-	fmt.Println("execution time: %s\n", elapsed)
 }

@@ -37,10 +37,6 @@ var ImageFrames = []string{
 	"cell_8.jpg",
 }
 
-func main() {
-	ProcessImageFrames()
-}
-
 func ProcessImageFrames() {
 	for _, frame := range ImageFrames {
 		ExtractPixelStats(frame)

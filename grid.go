@@ -11,7 +11,7 @@ import (
 var rows = 3
 var columns = 3
 
-func main() {
+func PartitionImage() {
 
 	frame := gocv.IMRead("./bayer-simulation2.png", gocv.IMReadAnyDepth|gocv.IMReadGrayScale)
 

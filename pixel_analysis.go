@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 type Pixel struct {
 	mean            float32
 	variance        float32
@@ -20,6 +24,29 @@ type Grid struct {
 	pattern cfaPattern
 }
 
-func ProcessImageFrames() {}
+// remember to port this over for live video processing
+var ImageFrames = []string{
+	"cell_0.jpg",
+	"cell_1.jpg",
+	"cell_2.jpg",
+	"cell_3.jpg",
+	"cell_4.jpg",
+	"cell_5.jpg",
+	"cell_6.jpg",
+	"cell_7.jpg",
+	"cell_8.jpg",
+}
 
-func ExtractPixelStats() {}
+func main() {
+	ProcessImageFrames()
+}
+
+func ProcessImageFrames() {
+	for _, frame := range ImageFrames {
+		ExtractPixelStats(frame)
+	}
+}
+
+func ExtractPixelStats(frame string) {
+	fmt.Printf(frame + "\n")
+}

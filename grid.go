@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"image"
 
@@ -9,6 +10,8 @@ import (
 
 var rows = 3
 var columns = 3
+
+var cellBuffer *bytes.Buffer
 
 func PartitionImage() {
 
@@ -51,6 +54,16 @@ func PartitionImage() {
 
 			// what we need to do here is load the specific grid into a buffer
 			// then hand it over to pixel analysis
+			buffer, err := gocv.IMEncode(".jpg", cell)
+
+			if err != nil {
+				fmt.Printf("trouble loading cell into buffer")
+			}
+
+			defer buffer.Close()
+
+			cellBuffer = bytes.NewBuffer(buffer.GetBytes())
+			fmt.Printf("Buffer size: %d bytes\n", cellBuffer.Len())
 
 			count++
 		}

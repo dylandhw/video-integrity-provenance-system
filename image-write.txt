@@ -1,0 +1,11 @@
+//package main
+
+//import (
+//	"gocv.io/x/gocv"
+//"fmt"
+//)
+
+//func WriteImage(count int){
+//	filename := fmt.Sprintf("cell_%d.jpg", count)
+//	gocv.IMWrite(filename, cell)
+//}

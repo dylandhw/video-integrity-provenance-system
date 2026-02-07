@@ -38,11 +38,15 @@ var ImageFrames = []string{
 }
 
 func ProcessImageFrames() {
+	if cellBuffer == nil {
+		fmt.Printf("no buffer :( \n")
+	} else {
+		fmt.Printf("buffer! \n")
+	}
+
 	for _, frame := range ImageFrames {
 		ExtractPixelStats(frame)
 	}
 }
 
-func ExtractPixelStats(frame string) {
-	fmt.Printf(frame + "\n")
-}
+func ExtractPixelStats(frame string) {}
